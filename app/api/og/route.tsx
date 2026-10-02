@@ -135,6 +135,7 @@ export function GET(request: Request) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            width: "100%",
             gap: 20,
           }}
         >
@@ -157,16 +158,24 @@ export function GET(request: Request) {
           {mode === "docs" ? (
             <div
               style={{
-                fontFamily: SERIF,
-                fontSize: 80,
-                fontWeight: 400,
-                lineHeight: 1.1,
-                letterSpacing: 0,
-                maxWidth: 960,
-                textWrap: "balance",
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
               }}
             >
-              {title}
+              <div
+                style={{
+                  fontFamily: SERIF,
+                  fontSize: 80,
+                  fontWeight: 400,
+                  lineHeight: 1.1,
+                  letterSpacing: 0,
+                  maxWidth: 960,
+                  textWrap: "balance",
+                }}
+              >
+                {title}
+              </div>
             </div>
           ) : (
             <div
@@ -182,9 +191,25 @@ export function GET(request: Request) {
                 maxWidth: 960,
               }}
             >
-              <div>Your website speaks.</div>
-              <div style={{ fontStyle: "italic", color: RED }}>
-                Give it a voice.
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "100%",
+                }}
+              >
+                <div>Your website speaks.</div>
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "100%",
+                  fontStyle: "italic",
+                  color: RED,
+                }}
+              >
+                <div>Give it a voice.</div>
               </div>
             </div>
           )}
@@ -192,14 +217,22 @@ export function GET(request: Request) {
           {mode === "docs" ? (
             <div
               style={{
-                fontSize: 25,
-                color: MUTED,
-                lineHeight: 1.45,
-                maxWidth: 880,
-                textWrap: "balance",
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
               }}
             >
-              {description}
+              <div
+                style={{
+                  fontSize: 25,
+                  color: MUTED,
+                  lineHeight: 1.45,
+                  maxWidth: 880,
+                  textWrap: "balance",
+                }}
+              >
+                {description}
+              </div>
             </div>
           ) : null}
         </div>
